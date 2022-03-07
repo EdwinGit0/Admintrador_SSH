@@ -1,0 +1,21 @@
+Administrador web SSH para permitir/denegar usuarios
+
+INSTRUCCIONES DE INSTALACION Y USO 
+1. Tener una pc con maquina virtual o real con el sistema linux opensuse
+
+2. Debes copiar todos los archivos .c de la carpeta "Codigo fuente proyecto C" a la carpeta cgi-bin que se encuentra en la direccion: /srv/www/cgi-bin
+
+2.1 Copiar el archivo sshd.copia_config en el directorio:  /etc/ssh/
+
+3. Compilar los archivos main.c y leerform.c (no es necesario compilar el archivo insertar.c)
+   IMPORTANTE!! 
+   El ejecutable del archivo main.c debe tener el mismo nombre "main", igualmente el ejecutable de leerform    debe tener el mismo nombre: "leerform" 
+
+4. Dar permisos especiales a los ejecutables con el comando chmod u+s main, chmod u+s leerform, 
+chmod u+s sshd.copia_config
+
+5. Debes iniciar los servicios vsftpd y apache2
+
+6. Abrir el navegador FIREFOX y ejecutamos el programa con la siguiente direccion: http://localhost/cgi-bin/main
+
+7. El programa ya se ejecutara y ya puedes permitir o denegar el servicio ssh a los usuarios que tiene tu sistema operativo
